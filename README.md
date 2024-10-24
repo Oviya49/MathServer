@@ -1,3 +1,4 @@
+
 # Ex.05 Design a Website for Server Side Processing
 ## Date:24-10-2024
 
@@ -71,15 +72,15 @@ REG.NO: 212223040140
 
         </style>
         <script>
-            function calculatepower(){
-                var a=Number(document.getElementById("CURRENT").value);
-                var b=Number(document.getElementById("RESISTANCE").value);
-                if(isNaN(a)||isNaN(b)||a==" "||b==" "){
+            function calculatearea(){
+                var a=Number(document.getElementById("RADIUS").value);
+                var b=Number(document.getElementById("HEIGHT").value);
+                if(isNaN(a)||isNaN(b)||a<=0||b<=0){
                     document.getElementById("result").textContent="please enter a valid number!!";
                     return ;
                 }
-                var power = Math.pow(a, 2) * b;
-                document.getElementById("result").textContent = "Power (P) = " + power + " watts";
+                var surfacearea=2*Math.PI*a*(a+b);
+                document.getElementById("result").textContent = "Surface Area =" +surfacearea.toFixed(2)+"square units";
 
             }
         </script>
@@ -87,14 +88,14 @@ REG.NO: 212223040140
     </head>
     <body background="https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3508.jpg?size=626&ext=jpg&ga=GA1.1.2113030492.1729468800&semt=ais_hybrid">
         <div class="box">
-        <h1 align="center">CALCULATE THE POWER </h1>
+        <h1 align="center">Surface Area Of a Cylinder</h1>
         <h2 align="center">(OVIYA N)</h2>
         <br><br><br>
-        <label>Current</label><br><br>
-        <input type="text" id="CURRENT" placeholder="current in Amperes"><br><br>
-        <label>Resistance</label><br><br>
-        <input type="text" id="RESISTANCE" placeholder="Resistance in Ohms"><br><br>
-        <input type="button" value="calculatePower" onclick="calculatepower()"><br><br>
+        <label><strong>Radius</strong></label><br><br>
+        <input type="text" id="RADIUS" placeholder="Radius in units"><br><br>
+        <label><strong>Height</strong></label><br><br>
+        <input type="text" id="HEIGHT" placeholder="Height in units"><br><br>
+        <input type="button" value="Calculate Surfacce Area" onclick="calculatearea()"><br><br>
         <p id="result"></p>
         </div>
 
@@ -105,7 +106,8 @@ REG.NO: 212223040140
 
 
 ## HOMEPAGE:
-![image](https://github.com/user-attachments/assets/fe3ee765-7cb1-4bc9-abc4-29942ad008d8)
+![image](https://github.com/user-attachments/assets/dc350a46-5cf7-467a-9239-22ff21c9864d)
+
 
 
 ## RESULT:
